@@ -17,11 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
+        <div className="bg-blue-500 p-8 text-white">
           <h1 className="text-2xl">this is Header</h1>
         </div>
         {children}
-        <div>
+        <div className="bg-yellow-200 p-8 text-white">
           <h1 className="text-2xl">this is Footer</h1>
         </div>
       </body>

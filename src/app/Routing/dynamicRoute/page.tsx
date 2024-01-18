@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const DynamicRoute = () => {
   return (
     <div>
@@ -5,6 +7,9 @@ const DynamicRoute = () => {
 
       <ul>
         <li>create a Route with [productId] for dynamic route</li>
+        <Link href="dynamicRoute/products/1" replace>
+          product1
+        </Link>
       </ul>
     </div>
   );
