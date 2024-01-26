@@ -1,7 +1,14 @@
 import { commentData } from "./data";
+import { type NextRequest } from "next/server.js";
 
-export async function GET() {
-  return Response.json(commentData);
+export async function GET(request: NextRequest) {
+  const queryRequest = request.nextUrl.searchParams;
+  const filteredDataQuery = queryRequest
+    ? commentData.filter((item) =>
+        item.Mobile.includes(queryRequest.toString())
+      )
+    : commentData;
+  return Response.json(filteredDataQuery);
 }
 
 export async function POST(request: Request) {
