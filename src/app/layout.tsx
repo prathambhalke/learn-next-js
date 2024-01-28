@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import RE from ".././../public/Images/RE.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-blue-500 p-8 text-white">
-          <h1 className="text-2xl">this is Header</h1>
+        <div className="bg-blue-500 p-8 text-white flex items-center">
+          <div>
+            <Image src={RE} alt="logo" height={50} width={50} />
+          </div>
+          <h1 className="text-2xl">Royal Enfield</h1>
         </div>
         {children}
         <div className="bg-yellow-200 p-8 text-white">
